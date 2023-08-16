@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#telegram-webapp {
+  background-color: #FFFFFF;
+  color: #000000;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+li{
+    padding: 10px;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#telegram-webapp.dark-theme {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+#telegram-webapp.blue-theme {
+  background-color: #0078FF;
+  color: #FFFFFF;
+}
+
+#telegram-webapp.red-theme {
+  background-color: #FF0000;
+  color: #FFFFFF;
+}
+
+#telegram-webapp.green-theme {
+  background-color: #00FF00;
+  color: #000000;
+}
+</style>
+</head>
+<body id="telegram-webapp">
+  <div>
+    <h1>Biba</h1>
+    <p>Ответ на вопрос бла-бла-бла Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio dolorem facere similique laudantium rerum dicta itaque, vitae, quae veritatis ducimus distinctio iure perferendis expedita laborum vel cupiditate fugiat officiis eligendi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis expedita numquam tempore nulla voluptate ipsum impedit ullam molestiae! Voluptas cum dolorem ratione tempore officiis distinctio totam perferendis magni consequatur fugiat!</p>
+  </div>
+
+<script>
+// Function to switch between dark, blue, red, and green themes
+function switchTheme(theme) {
+  const element = document.getElementById("telegram-webapp");
+
+  // Remove existing theme class
+  element.classList.remove("dark-theme", "blue-theme", "red-theme", "green-theme");
+
+  // Add the selected theme class
+  element.classList.add(theme);
+}
+
+// Get the user's selected colors from Telegram
+const userBgColor = window.Telegram.WebApp.themeParams.bg_color;
+const userTextColor = window.Telegram.WebApp.themeParams.text_color;
+
+// Set the user's colors as the background and text colors in the webapp
+const telegramWebApp = document.getElementById("telegram-webapp");
+telegramWebApp.style.backgroundColor = userBgColor;
+telegramWebApp.style.color = userTextColor;
+</script>
+</body>
+</html>
