@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Web App</title>
+    <style>
+        body {
+            background-color: var(--telegram-background-color);
+        }
+    </style>
+    <script>
+        // Check the user's theme preference
+        const isDarkTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const themeColor = isDarkTheme ? '#1e293b' : '#ffffff'; // Change these values based on the desired light and dark theme colors
+
+        // Set the CSS variable for the background color
+        document.documentElement.style.setProperty('--telegram-background-color', themeColor);
+    </script>
+</head>
+
+<body>
+    <h1>Welcome to the Telegram Web App!</h1>
+    <p>This is a minimal web page that dynamically sets the background color based on the user's theme in Telegram.</p>
+</body>
+
+</html>
