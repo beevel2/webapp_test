@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#telegram-webapp {
+  background-color: #FFFFFF;
+  color: #000000;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  content: '';
+  margin-top: auto;
+}
+
+li{
+    padding: 10px;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#telegram-webapp.dark-theme {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+#telegram-webapp.blue-theme {
+  background-color: #0078FF;
+  color: #FFFFFF;
+}
+
+#telegram-webapp.red-theme {
+  background-color: #FF0000;
+  color: #FFFFFF;
+}
+
+#telegram-webapp.green-theme {
+  background-color: #00FF00;
+  color: #000000;
+}
+
+h1{
+  font-size: xx-large;
+}
+
+p {
+  font-size: large;
+  text-align: left;
+}
+
+b {
+  font-size: large;
+}
+
+a {
+  font-size: x-large;
+}
+
+footer{
+  padding: 30px;
+}
+</style>
+</head>
+<body>
+  <div id="telegram-webapp">
+    <h1>Наша реферальная система</h1>
+    <p>
+    С реферальной системой всё очень просто. Человек перешедший по вашей ссылке при регистрации автоматически становится вашим рефералом!
+<br><br>
+Бонусы получаете и вы, и реферал:<br>
+— При регистрации 5 дней обоим<br>
+— При подписке 10 дней вам и 5 рефералу<br>
+<br><br>
+Бонусные дни начисляются в виде внутренней валюты "бонусы". Их количество вы можете посмотреть во вкладке "Реферальная система" внутри бота. Там же в любой момент вы можете обменять свои бонусы на бесплатный ключ 1 бонус = 1 день пользования VPN
+    </p>
+    <a href="index.html">🔙Назад</a>
+  </div>
+
+
+  <footer></footer>
+<script>
+// Function to switch between dark, blue, red, and green themes
+function switchTheme(theme) {
+  const element = document.getElementById("telegram-webapp");
+
+  // Remove existing theme class
+  element.classList.remove("dark-theme", "blue-theme", "red-theme", "green-theme");
+
+  // Add the selected theme class
+  element.classList.add(theme);
+}
+
+// Get the user's selected colors from Telegram
+const userBgColor = window.Telegram.WebApp.themeParams.bg_color;
+const userTextColor = window.Telegram.WebApp.themeParams.text_color;
+
+// Set the user's colors as the background and text colors in the webapp
+const telegramWebApp = document.getElementById("telegram-webapp");
+telegramWebApp.style.backgroundColor = userBgColor;
+telegramWebApp.style.color = userTextColor;
+</script>
+</body>
+</html>
