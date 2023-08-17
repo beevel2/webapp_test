@@ -18,18 +18,19 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   text-align: left;
   content: '';
-  margin-top: auto;
+  /* margin-top: auto; */
 }
 
 li{
     padding: 10px;
-    font-size: x-large;
+    text-decoration: none;
 }
 
 a{
+    text-decoration: none;
     color: inherit;
 }
 
@@ -52,23 +53,41 @@ a{
   background-color: #00FF00;
   color: #000000;
 }
+
+h1{
+  font-size: xx-large;
+}
+
+p {
+  font-size: large;
+  text-align: left;
+}
+
+b {
+  font-size: large;
+}
+
+a {
+  font-size: x-large;
+}
+
+footer{
+  padding: 30px;
+}
 </style>
 </head>
-<body id="telegram-webapp">
-  <div>
-    <h1>Какой у вас вопрос?</h1>
-    <ul>
-        <li><a href="doesnt_work.html">🚫 Не работает VPN</a></li>
-        <li><a href="limits.html">🔗 Есть ли у вас лимиты?</a></li>
-        <li><a href="apps.html">📱 Какие приложения можно использовать?</a></li>
-        <li><a href="ref.html">🎁 Наша реферальная система</a></li>
-        <li><a href="work.html">🖥 Какие приложения и сайты работают?</a></li>
-        <li><a href="diff.html">❓ В чем отличие от других сервисов?</a></li>
-        <li><a href="transfer.html">🔀 Как перенести подписку из другого сервиса?</a></li>
-
-    </ul>
+<body>
+  <div id="telegram-webapp">
+    <h1>Какие сайты и приложения работают?</h1>
+    <p>
+        Любые!<br><br>
+        Работают все приложения: instagram, Госуслуги, Банки, Netflix и все остальное без необходимости выключать VPN!
+    </p>
+    <a href="index.html">🔙Назад</a>
   </div>
 
+
+  <footer></footer>
 <script>
 // Function to switch between dark, blue, red, and green themes
 function switchTheme(theme) {
