@@ -2,6 +2,7 @@
 <html>
 <head>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="index.js"></script>
 <style>
 html, body {
   height: 100%;
@@ -10,6 +11,15 @@ html, body {
   justify-content: center;
   align-items: center;
 }
+
+button {
+  background: none;
+  font-size: inherit;
+  border: none;
+  text-align: left;
+  text-decoration: underline;
+}
+
 
 #telegram-webapp {
   background-color: #FFFFFF;
@@ -97,7 +107,7 @@ footer{
     <b>В большинстве случаев, одно из этих решений поможет исправить проблему с подключением приложения Outline к серверу.</b></p>
   
     <p>Если ни одно решение не помогло - обратитесь в службу поддержки</p>
-    <a href="index.html">🔙Назад</a>
+    <button type="button" onclick="writeIndex()">🔙Назад</button>
   </div>
 
 

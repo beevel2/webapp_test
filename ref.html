@@ -2,6 +2,8 @@
 <html>
 <head>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="index.js"></script>
+
 <style>
 html, body {
   height: 100%;
@@ -9,6 +11,14 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+button {
+  background: none;
+  font-size: inherit;
+  border: none;
+  text-align: left;
+  text-decoration: underline;
 }
 
 #telegram-webapp {
@@ -88,7 +98,7 @@ footer{
 <br><br>
 Бонусные дни начисляются в виде внутренней валюты "бонусы". Их количество вы можете посмотреть во вкладке "Реферальная система" внутри бота. Там же в любой момент вы можете обменять свои бонусы на бесплатный ключ 1 бонус = 1 день пользования VPN
     </p>
-    <a href="index.html">🔙Назад</a>
+    <button type="button" onclick="writeIndex()">🔙Назад</button>
   </div>
 
 
